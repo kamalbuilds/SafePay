@@ -27,11 +27,11 @@ const NavMenu = ({ setStep, activeStep }: NavMenuProps) => {
         </NavItem>
 
         <NavItem onClick={() => setStep(1)} active={activeStep === 1}>
-          <OrderLabel fontSize="10px" fontWeight="700">
+        <OrderLabel fontSize="10px" fontWeight="700">
             01
           </OrderLabel>
-          <Typography fontWeight="700" fontSize="20px" marginLeft="12px">
-            Auth Kit
+          <Typography fontWeight="700" fontSize="20px">
+            Choose Category
           </Typography>
         </NavItem>
 
@@ -40,7 +40,7 @@ const NavMenu = ({ setStep, activeStep }: NavMenuProps) => {
             02
           </OrderLabel>
           <Typography fontWeight="700" fontSize="20px" marginLeft="12px">
-            Onramp Kit
+            Authenticate
           </Typography>
         </NavItem>
 
@@ -49,13 +49,16 @@ const NavMenu = ({ setStep, activeStep }: NavMenuProps) => {
             03
           </OrderLabel>
           <Typography fontWeight="700" fontSize="20px" marginLeft="12px">
-            Relay Kit
+            Buy Crypto using CC
           </Typography>
         </NavItem>
 
         <NavItem onClick={() => setStep(4)} active={activeStep === 4}>
-          <Typography fontWeight="700" fontSize="20px">
-            About
+          <OrderLabel fontSize="10px" fontWeight="700">
+            04
+          </OrderLabel>
+          <Typography fontWeight="700" fontSize="20px" marginLeft="12px">
+            Relay Kit
           </Typography>
         </NavItem>
       </MenuList>

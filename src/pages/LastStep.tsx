@@ -1,8 +1,11 @@
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-import Box from "@mui/material/Box";
-
-import safeLogo from "src/assets/safe-logo.svg";
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import business from "../assets/business.png";
+import { Grid } from "@mui/material";
 
 type LastStepProps = {
   setStep: (newStep: number) => void;
@@ -10,33 +13,48 @@ type LastStepProps = {
 
 const LastStep = ({ setStep }: LastStepProps) => {
   return (
-    <Box
-      display="flex"
-      flexDirection="column"
-      alignItems="flex-start"
-      paddingTop="72px"
-      paddingLeft="100px"
-    >
-      <img src={safeLogo} alt="safe logo" height="30px" />
-
-      <Typography variant="h1" fontSize="64px" lineHeight="76px">
-        Come MAArch with us in our Account Abstraction hackathon.
-      </Typography>
-
-      <Box display="flex" gap={2} marginTop="32px">
-        <Button variant="outlined" onClick={() => setStep(0)}>
-          Back to Demo
-        </Button>
-
-        <Button
-          variant="contained"
-          href="https://dorahacks.io/hackathon/safe"
-          target="_blank"
-        >
-          Join the Hackaton
-        </Button>
-      </Box>
-    </Box>
+    <>
+    <h1>Choose Your Category</h1>
+    <Grid container spacing={2}>
+      <Card sx={{ maxWidth: 345 }} className="my-6">
+        <CardMedia
+          sx={{ height: 140 }}
+          image={business}
+          title="green iguana"
+        />
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="div">
+            Business
+          </Typography>
+          <Typography variant="body2" color="text.secondary">
+          easily pay their employees with any cryptocurrency or fiat currency, which could potentially lead to faster, more secure, 
+          and cheaper transactions than traditional payroll methods.
+          </Typography>
+        </CardContent>
+        <CardActions>
+          <Button size="small">Get Started</Button>
+        </CardActions>
+      </Card>
+      <Card sx={{ maxWidth: 345 }}>
+        <CardMedia
+          sx={{ height: 140 }}
+          image={business}
+          title="green iguana"
+        />
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="div">
+            Worker
+          </Typography>
+          <Typography variant="body2" color="text.secondary">
+            Get Paid from any Client or Employer Safely and easily.
+          </Typography>
+        </CardContent>
+        <CardActions>
+          <Button size="small">Get Started</Button>
+        </CardActions>
+      </Card>
+    </Grid>
+  </>
   );
 };
 

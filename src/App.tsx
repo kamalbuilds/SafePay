@@ -34,7 +34,7 @@ function App() {
   const isFirstStep = activeStep === 0;
   const isLastStep = activeStep === steps.length - 1;
 
-  const showSafeCoreVideo = isFirstStep || isLastStep;
+  const showSafeCoreVideo = isFirstStep;
 
   const ActiveStepComponent = steps[activeStep].component;
   const nextLabel = steps[activeStep].nextLabel;
@@ -109,6 +109,10 @@ const steps = [
     component: Intro,
   },
   {
+    // Final step
+    component: LastStep,
+  },
+  {
     // Auth Kit step
     component: AuthKitDemo,
     nextLabel: "to Onramp Kit",
@@ -122,9 +126,5 @@ const steps = [
     // Relay Kit step
     component: RelayerKitDemo,
     nextLabel: "Final",
-  },
-  {
-    // Final step
-    component: LastStep,
-  },
+  }
 ];
