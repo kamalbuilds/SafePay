@@ -15,6 +15,7 @@ import Header from "src/components/header/Header";
 import Providers from "src/components/providers/Providers";
 import SafeCoreInfo from "./components/safe-core-info/SafeCoreInfo";
 import NavMenu from "./components/nav-menu/NavMenu";
+import { GaslessOnboarding } from "./components/Gaslessonboard";
 
 function App() {
   const [activeStep, setActiveStep] = useState(0);
@@ -124,7 +125,12 @@ const steps = [
   },
   {
     // Relay Kit step
-    component: RelayerKitDemo,
+    component: GaslessOnboarding,
     nextLabel: "Final",
+  },
+  {
+    // Relay Kit step
+    component: GaslessOnboarding,
+    nextLabel: "Fina",
   }
 ];

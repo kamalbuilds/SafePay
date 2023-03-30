@@ -5,6 +5,7 @@
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
+    "@gelatonetwork/gasless-wallet": "^0.0.3",
     "@mui/icons-material": "^5.11.0",
     "@mui/material": "^5.11.7",
     "@safe-global/account-abstraction-kit-poc": "^0.1.0-alpha.1",
@@ -62,7 +63,7 @@
   "browserslist": {
     "production": [
       "chrome >= 67",
-      "edge >= 79",
+      "ed >= 79",
       "firefox >= 68",
       "opera >= 54",
       "safari >= 14"
