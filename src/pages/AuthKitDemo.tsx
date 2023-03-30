@@ -87,55 +87,12 @@ const AuthKitDemo = () => {
         </ConnectContainer>
       )}
 
-      <Divider style={{ margin: "40px 0 30px 0" }} />
-
-      <Typography
-        variant="h3"
-        component="h2"
-        fontWeight="700"
-        marginBottom="16px"
-      >
-        How to use it
-      </Typography>
-
-      {/* TODO: create a component for this? */}
-      <CodeContainer>
-        <CodeBlock
-          text={code}
-          language={"javascript"}
-          showLineNumbers
-          startingLineNumber={96}
-          theme={atomOneDark}
-        />
-      </CodeContainer>
     </>
   );
 };
 
 export default AuthKitDemo;
 
-const code = `import { SafeAuthKit, SafeAuthProviderType } from '@safe-global/auth-kit'
-
-const safeAuthKit = await SafeAuthKit.init(SafeAuthProviderType.Web3Auth, {
-  chainId: '0x5',
-  authProviderConfig: {
-    rpc: <Your rpc url>, // Add your RPC e.g. https://goerli.infura.io/v3/<your project id>
-    clientId: <Your client id>, // Add your client id. Get it from the Web3Auth dashboard
-    network: 'testnet' | 'mainnet', // The network to use for the Web3Auth modal.
-    theme: 'light' | 'dark' // The theme to use for the Web3Auth modal
-  }
-})
-
-// Allow to login and get the derived eoa
-safeAuthKit.signIn()
-
-// Logout
-safeAuthKit.signOut()
-
-// Get the provider
-safeAuthKit.getProvider()
-
-`;
 
 const ConnectContainer = styled(Box)<{
   theme?: Theme;
@@ -148,15 +105,6 @@ const ConnectContainer = styled(Box)<{
 `
 );
 
-const CodeContainer = styled(Box)<{
-  theme?: Theme;
-}>(
-  ({ theme }) => `
-  border-radius: 10px;
-  border: 1px solid ${theme.palette.border.light};
-  padding: 16px;
-`
-);
 
 const ConnectedContainer = styled(Box)<{
   theme?: Theme;

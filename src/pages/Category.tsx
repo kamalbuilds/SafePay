@@ -4,14 +4,15 @@ import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-import business from "../assets/business.png";
+import business  from "../assets/business.png";
+import worker  from "../assets/worker.png";
 import { Grid } from "@mui/material";
 
 type LastStepProps = {
   setStep: (newStep: number) => void;
 };
 
-const LastStep = ({ setStep }: LastStepProps) => {
+const Category = ({ setStep }: LastStepProps) => {
   return (
     <>
     <h1>Choose Your Category</h1>
@@ -38,7 +39,7 @@ const LastStep = ({ setStep }: LastStepProps) => {
       <Card sx={{ maxWidth: 345 }}>
         <CardMedia
           sx={{ height: 140 }}
-          image={business}
+          image={worker}
           title="green iguana"
         />
         <CardContent>
@@ -58,4 +59,4 @@ const LastStep = ({ setStep }: LastStepProps) => {
   );
 };
 
-export default LastStep;
+export default Category;

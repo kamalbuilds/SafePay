@@ -174,43 +174,12 @@ const RelayerKitDemo = () => {
           </ConnectedContainer>
         </Box>
       )}
-
-      <Divider style={{ margin: "40px 0 30px 0" }} />
-
-      <Typography
-        variant="h3"
-        component="h2"
-        fontWeight="700"
-        marginBottom="16px"
-      >
-        How to use it
-      </Typography>
-
-      {/* TODO: create a component for this? */}
-      <CodeContainer>
-        <CodeBlock
-          text={code}
-          language={"javascript"}
-          showLineNumbers
-          startingLineNumber={96}
-          theme={atomOneDark}
-        />
-      </CodeContainer>
     </>
   );
 };
 
 export default RelayerKitDemo;
 
-const code = `import { GelatoRelayAdapter } from '@safe-global/relay-kit'
-
-const relayAdapter = new GelatoRelayAdapter()
-
-relayAdapter.relayTransaction({
-  target: '0x...', // the Safe address
-  encodedTransaction: '0x...', // Encoded Safe transaction data
-  chainId: 5
-})`;
 
 const ConnectedContainer = styled(Box)<{
   theme?: Theme;
@@ -220,15 +189,5 @@ const ConnectedContainer = styled(Box)<{
   border-radius: 10px;
   border: 1px solid ${theme.palette.border.light};
   padding: 40px 32px;
-`
-);
-
-const CodeContainer = styled(Box)<{
-  theme?: Theme;
-}>(
-  ({ theme }) => `
-  border-radius: 10px;
-  border: 1px solid ${theme.palette.border.light};
-  padding: 16px;
 `
 );

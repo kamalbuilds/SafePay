@@ -153,54 +153,13 @@ const OnRampKitDemo = () => {
         </Box>
       )}
 
-      <Divider style={{ margin: "40px 0 30px 0" }} />
-
-      <Typography
-        variant="h3"
-        component="h2"
-        fontWeight="700"
-        marginBottom="16px"
-      >
-        How to use it
-      </Typography>
-
-      {/* TODO: create a component for this? */}
-      <CodeContainer>
-        <CodeBlock
-          text={code}
-          language={"javascript"}
-          showLineNumbers
-          startingLineNumber={96}
-          theme={atomOneDark}
-        />
-      </CodeContainer>
     </>
   );
 };
 
 export default OnRampKitDemo;
 
-const code = `import { SafeOnRampKit, SafeOnRampProviderType } from '@safe-global/onramp-kit'
 
-const safeOnRamp = await SafeOnRampKit.init(SafeOnRampProviderType.Stripe, {
-  onRampProviderConfig: {
-    stripePublicKey: <You public key>, // You should get your own keys from Stripe
-    onRampBackendUrl: <Your backend url> // You should deploy your own server
-  }
-})
-
-const sessionData = await safeOnRamp.open({
-  walletAddress,
-  networks: ['polygon']
-  element: '#stripe-root',
-  events: {
-    onLoaded: () => console.log('Loaded'),
-    onPaymentSuccessful: () => console.log('Payment successful')
-    onPaymentError: () => console.log('Payment failed')
-    onPaymentProcessing: () => console.log('Payment processing')
-  }
-})
-`;
 
 const ConnectedContainer = styled(Box)<{
   theme?: Theme;
@@ -212,15 +171,5 @@ const ConnectedContainer = styled(Box)<{
   padding: 40px 32px;
 
   min-height: 265px;
-`
-);
-
-const CodeContainer = styled(Box)<{
-  theme?: Theme;
-}>(
-  ({ theme }) => `
-  border-radius: 10px;
-  border: 1px solid ${theme.palette.border.light};
-  padding: 16px;
 `
 );
