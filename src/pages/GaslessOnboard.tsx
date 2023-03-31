@@ -28,9 +28,10 @@ export default function GaslessOnboardingComponent() {
       redirectUrl: 'https://3000-legendarykamal-safepay-80g2xiigdbo.ws-us93.gitpod.io/',
     },
   };
-  
+  console.log(process.env.apiKey,'here') ;
+
   const gaslessWalletConfig: GaslessWalletConfig = {
-    apiKey: '',
+    apiKey: process.env.apiKey
   };
 
   const gaslessOnboarding = new GaslessOnboarding(loginConfig, gaslessWalletConfig);
