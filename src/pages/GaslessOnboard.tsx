@@ -28,10 +28,9 @@ export default function GaslessOnboardingComponent() {
       redirectUrl: 'https://3000-legendarykamal-safepay-80g2xiigdbo.ws-us93.gitpod.io/',
     },
   };
-  console.log(process.env.apiKey,'here') ;
 
   const gaslessWalletConfig: GaslessWalletConfig = {
-    apiKey: process.env.apiKey
+    apiKey: '8f1pO9ZPvUpwyJ_1lecK_ajDIt_A10TJbGiuYjvWp9s_'
   };
 
   const gaslessOnboarding = new GaslessOnboarding(loginConfig, gaslessWalletConfig);
@@ -41,7 +40,8 @@ export default function GaslessOnboardingComponent() {
   useEffect(() => {
     async function init() {
       try {
-        await gaslessOnboarding.init();
+        const initiz = await gaslessOnboarding.init();
+        console.log(initiz,'initizalised');
         await gaslessOnboarding.login();
         console.log(gaslessOnboarding.getUserInfo(),"in");
         setProvider(gaslessOnboarding.getProvider());
@@ -92,7 +92,7 @@ export default function GaslessOnboardingComponent() {
               <p>Profile Image: {userInfo.profileImage}</p>
             </div>
       )}
-      {userInfo && <Button variant="contained" onClick={handleGetUserInfo}>Get User Info</Button>}
+      {<Button variant="contained" onClick={handleGetUserInfo}>Get User Info</Button>}
         </>
       ) : (
         <Button variant="contained" color="primary" onClick={handleLogin}>
