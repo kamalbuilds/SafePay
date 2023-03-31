@@ -17,6 +17,7 @@ import Providers from "src/components/providers/Providers";
 import SafeCoreInfo from "./components/safe-core-info/SafeCoreInfo";
 import NavMenu from "./components/nav-menu/NavMenu";
 import GaslessOnboardingComponent  from "src/pages/GaslessOnboard";
+import { CreateStream } from "./pages/CreateStream";
 
 function App() {
   const [activeStep, setActiveStep] = useState(0);
@@ -123,6 +124,9 @@ const steps = [
     // Onramp Kit step
     component: OnRampKitDemo,
     nextLabel: "to Relay Kit",
+  },
+  {
+    component: CreateStream,
   },
   {
     // Relay Kit step

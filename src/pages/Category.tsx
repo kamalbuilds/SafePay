@@ -17,7 +17,7 @@ const Category = ({ setStep }: LastStepProps) => {
     <>
     <h1 className="text-2xl font-bold text-sky-400">Choose Your Category</h1>
     <br />
-    <Grid container spacing={2} className="my-4">
+    <Grid container spacing={4} className="my-4">
       <Card sx={{ maxWidth: 345 }}>
         <CardMedia
           sx={{ height: 140 }}

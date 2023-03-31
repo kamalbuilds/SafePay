@@ -51,7 +51,7 @@ const OnRampKitDemo = () => {
         fontWeight="700"
         marginBottom="16px"
       >
-        Interactive demo
+        Try It
       </Typography>
 
       {!isAuthenticated ? (

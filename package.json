@@ -13,6 +13,7 @@
     "@safe-global/onramp-kit": "0.1.0-alpha.2",
     "@safe-global/relay-kit": "0.1.0-alpha.2",
     "@safe-global/safe-react-components": "^2.0.3",
+    "@superfluid-finance/sdk-core": "^0.6.3",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",

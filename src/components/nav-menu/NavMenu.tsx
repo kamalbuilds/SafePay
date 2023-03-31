@@ -58,13 +58,22 @@ const NavMenu = ({ setStep, activeStep }: NavMenuProps) => {
             04
           </OrderLabel>
           <Typography fontWeight="700" fontSize="20px" marginLeft="12px">
-            Relay Kit
+            Stream Money
           </Typography>
         </NavItem>
 
         <NavItem onClick={() => setStep(5)} active={activeStep === 5}>
           <OrderLabel fontSize="10px" fontWeight="700">
             05
+          </OrderLabel>
+          <Typography fontWeight="700" fontSize="20px" marginLeft="12px">
+            Relay Kit
+          </Typography>
+        </NavItem>
+
+        <NavItem onClick={() => setStep(6)} active={activeStep === 6}>
+          <OrderLabel fontSize="10px" fontWeight="700">
+            06
           </OrderLabel>
           <Typography fontWeight="700" fontSize="20px" marginLeft="12px">
             Gasless Onboarding
