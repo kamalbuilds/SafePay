@@ -1,6 +1,6 @@
 # Safe Pay
 
-Get paid and Pay with any Crypto Currency seamlessly using SafePay
+Cross Chain Pay-roll Management using AA -> Get paid and Pay with any Crypto Currency seamlessly using SafePay
 
 # Features 
 
