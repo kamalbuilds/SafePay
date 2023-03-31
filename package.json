@@ -5,6 +5,7 @@
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
+    "@gelatonetwork/gasless-wallet": "^0.0.3",
     "@mui/icons-material": "^5.11.0",
     "@mui/material": "^5.11.7",
     "@safe-global/account-abstraction-kit-poc": "^0.1.0-alpha.1",
@@ -12,6 +13,7 @@
     "@safe-global/onramp-kit": "0.1.0-alpha.2",
     "@safe-global/relay-kit": "0.1.0-alpha.2",
     "@safe-global/safe-react-components": "^2.0.3",
+    "@superfluid-finance/sdk-core": "^0.6.3",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -61,11 +63,9 @@
   },
   "browserslist": {
     "production": [
-      "chrome >= 67",
-      "edge >= 79",
-      "firefox >= 68",
-      "opera >= 54",
-      "safari >= 14"
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
     ],
     "development": [
       "last 1 chrome version",

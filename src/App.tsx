@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { useCallback, useState } from "react";
 import CssBaseline from "@mui/material/CssBaseline";
 import Box from "@mui/material/Box";
@@ -5,16 +6,19 @@ import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import "@safe-global/safe-react-components/dist/fonts.css";
-
+import {  LoginConfig, GaslessWalletConfig } from "./components/Gaslessonboard";
 import Intro from "src/pages/Intro";
 import AuthKitDemo from "src/pages/AuthKitDemo";
 import OnRampKitDemo from "src/pages/OnRampKitDemo";
-import RelayerKitDemo from "src/pages/RelayerKitDemo";
+import RelayerKitDemo from "src/pages/RelayerKit";
 import LastStep from "src/pages/Category";
 import Header from "src/components/header/Header";
 import Providers from "src/components/providers/Providers";
 import SafeCoreInfo from "./components/safe-core-info/SafeCoreInfo";
 import NavMenu from "./components/nav-menu/NavMenu";
+import GaslessOnboardingComponent  from "src/pages/GaslessOnboard";
+import { CreateStream } from "./pages/CreateStream";
+import SafeMetaTx from "./pages/SafeMetaTx";
 
 function App() {
   const [activeStep, setActiveStep] = useState(0);
@@ -123,8 +127,27 @@ const steps = [
     nextLabel: "to Relay Kit",
   },
   {
+    component: CreateStream,
+  },
+  {
     // Relay Kit step
     component: RelayerKitDemo,
     nextLabel: "Final",
+  },
+  {
+    // Relay Kit step
+    component: GaslessOnboardingComponent,
+    loginConfig: {
+      // add login config here
+    },
+    gaslessWalletConfig: {
+      
+      // add gasless wallet config here
+      // loginConfig: LoginConfig,
+      // gaslessWalletConfig: GaslessWalletConfig
+    },
+  },
+  {
+    component: SafeMetaTx
   }
 ];

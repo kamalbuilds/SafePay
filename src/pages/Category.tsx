@@ -15,9 +15,10 @@ type LastStepProps = {
 const Category = ({ setStep }: LastStepProps) => {
   return (
     <>
-    <h1>Choose Your Category</h1>
-    <Grid container spacing={2}>
-      <Card sx={{ maxWidth: 345 }} className="my-6">
+    <h1 className="text-2xl font-bold text-sky-400">Choose Your Category</h1>
+    <br />
+    <Grid container spacing={4} className="my-4">
+      <Card sx={{ maxWidth: 345 }}>
         <CardMedia
           sx={{ height: 140 }}
           image={business}
@@ -36,7 +37,7 @@ const Category = ({ setStep }: LastStepProps) => {
           <Button size="small">Get Started</Button>
         </CardActions>
       </Card>
-      <Card sx={{ maxWidth: 345 }}>
+      <Card sx={{ maxWidth: 345 }} className="p-4">
         <CardMedia
           sx={{ height: 140 }}
           image={worker}
@@ -54,7 +55,9 @@ const Category = ({ setStep }: LastStepProps) => {
           <Button size="small">Get Started</Button>
         </CardActions>
       </Card>
+      
     </Grid>
+    
   </>
   );
 };

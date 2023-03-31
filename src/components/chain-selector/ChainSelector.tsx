@@ -21,7 +21,7 @@ const ChainSelector = () => {
           }
         >
           {chains.map((chain) => (
-            <MenuItem value={chain.id} onClick={() => setChainId(chain.id)}>
+            <MenuItem value={chain.id} onClick={() => setChainId(chain.id)} key={chain.id}>
               <div
                 style={{
                   display: "flex",
