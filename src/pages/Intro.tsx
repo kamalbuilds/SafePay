@@ -31,36 +31,7 @@ const Intro = ({ setStep }: IntroProps) => {
         Get paid and Pay with any Crypto Currency seamlessly using SafePay
       </Typography>
 
-      {/* Kit list */}
-      <Box display="flex" gap={2} marginTop="36px">
-        <Box display="flex" gap={1}>
-          <OrderLabel fontSize="10px" fontWeight="700">
-            01
-          </OrderLabel>
-          <Typography fontWeight="700" fontSize="20px">
-            Auth Kit
-          </Typography>
-        </Box>
-
-        <Box display="flex" gap={1}>
-          <OrderLabel fontSize="10px" fontWeight="700">
-            02
-          </OrderLabel>
-          <Typography fontWeight="700" fontSize="20px">
-            Onramp Kit
-          </Typography>
-        </Box>
-
-        <Box display="flex" gap={1}>
-          <OrderLabel fontSize="10px" fontWeight="700">
-            03
-          </OrderLabel>
-          <Typography fontWeight="700" fontSize="20px">
-            Relay Kit
-          </Typography>
-        </Box>
-      </Box>
-
+  
       <Divider style={{ alignSelf: "stretch", margin: "42px 0" }} />
 
       <Typography variant="h2" fontWeight="700" fontSize="20px">

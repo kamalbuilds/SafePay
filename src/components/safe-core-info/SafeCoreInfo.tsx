@@ -16,10 +16,10 @@ const SafeCoreInfo = () => {
 
       {/* Links */}
       <Typography marginLeft={"42px"} marginTop={"24px"}>
-        More information about the SDK:
+        Safe Pay using AA
       </Typography>
 
-      <Stack
+      {/* <Stack
         direction="row"
         alignItems="center"
         spacing={2}
@@ -43,7 +43,7 @@ const SafeCoreInfo = () => {
         <Link href="https://chat.safe.global" target="_blank">
           Discord
         </Link>
-      </Stack>
+      </Stack> */}
     </div>
   );
 };

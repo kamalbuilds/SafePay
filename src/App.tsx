@@ -10,7 +10,7 @@ import {  LoginConfig, GaslessWalletConfig } from "./components/Gaslessonboard";
 import Intro from "src/pages/Intro";
 import AuthKitDemo from "src/pages/AuthKitDemo";
 import OnRampKitDemo from "src/pages/OnRampKitDemo";
-import RelayerKitDemo from "src/pages/RelayerKitDemo";
+import RelayerKitDemo from "src/pages/RelayerKit";
 import LastStep from "src/pages/Category";
 import Header from "src/components/header/Header";
 import Providers from "src/components/providers/Providers";
@@ -18,6 +18,7 @@ import SafeCoreInfo from "./components/safe-core-info/SafeCoreInfo";
 import NavMenu from "./components/nav-menu/NavMenu";
 import GaslessOnboardingComponent  from "src/pages/GaslessOnboard";
 import { CreateStream } from "./pages/CreateStream";
+import SafeMetaTx from "./pages/SafeMetaTx";
 
 function App() {
   const [activeStep, setActiveStep] = useState(0);
@@ -136,7 +137,6 @@ const steps = [
   {
     // Relay Kit step
     component: GaslessOnboardingComponent,
-    nextLabel: "Fina",
     loginConfig: {
       // add login config here
     },
@@ -146,5 +146,8 @@ const steps = [
       // loginConfig: LoginConfig,
       // gaslessWalletConfig: GaslessWalletConfig
     },
+  },
+  {
+    component: SafeMetaTx
   }
 ];

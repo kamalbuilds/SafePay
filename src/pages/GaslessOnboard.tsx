@@ -88,13 +88,13 @@ export default function GaslessOnboardingComponent() {
           <Button variant="contained" color="primary" onClick={handleLogout}>
             Logout
           </Button>
-          {/* {userInfo && (
+          {userInfo && (
             <div>
               <p>Name: {userInfo.name}</p>
               <p>Email: {userInfo.email}</p>
               <p>Profile Image: {userInfo.profileImage}</p>
             </div>
-      )} */}
+      )}
       {<Button variant="contained" onClick={handleGetUserInfo}>Get User Info</Button>}
         </>
       ) : (

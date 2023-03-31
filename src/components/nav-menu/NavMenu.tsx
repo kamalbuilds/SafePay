@@ -79,6 +79,15 @@ const NavMenu = ({ setStep, activeStep }: NavMenuProps) => {
             Gasless Onboarding
           </Typography>
         </NavItem>
+
+        <NavItem onClick={() => setStep(7)} active={activeStep === 7}>
+          <OrderLabel fontSize="10px" fontWeight="700">
+            07
+          </OrderLabel>
+          <Typography fontWeight="700" fontSize="20px" marginLeft="12px">
+            SafeMetaTx
+          </Typography>
+        </NavItem>
       </MenuList>
     </NavMenuContainer>
   );
