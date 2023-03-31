@@ -1,6 +1,20 @@
 // @ts-nocheck
 //  /* eslint-disable */
 import React, { useState, useEffect } from "react";
+
+export default function GaslessOnboardingComponent() {
+      return (
+    <div>
+      kaqmal
+    </div>
+  );
+}
+
+
+
+
+
+
 // import { GaslessOnboarding, LoginConfig, GaslessWalletConfig } from "../components/Gaslessonboard";
 // import { SafeEventEmitterProvider  } from "@web3auth/base";
 // import { Button } from "@mui/material";
