@@ -5,7 +5,7 @@ import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import "@safe-global/safe-react-components/dist/fonts.css";
-
+import {  LoginConfig, GaslessWalletConfig } from "./components/Gaslessonboard";
 import Intro from "src/pages/Intro";
 import AuthKitDemo from "src/pages/AuthKitDemo";
 import OnRampKitDemo from "src/pages/OnRampKitDemo";
@@ -15,7 +15,7 @@ import Header from "src/components/header/Header";
 import Providers from "src/components/providers/Providers";
 import SafeCoreInfo from "./components/safe-core-info/SafeCoreInfo";
 import NavMenu from "./components/nav-menu/NavMenu";
-import { GaslessOnboarding } from "./components/Gaslessonboard";
+import GaslessOnboardingComponent  from "src/pages/GaslessOnboard";
 
 function App() {
   const [activeStep, setActiveStep] = useState(0);
@@ -125,12 +125,20 @@ const steps = [
   },
   {
     // Relay Kit step
-    component: GaslessOnboarding,
+    component: RelayerKitDemo,
     nextLabel: "Final",
   },
   {
     // Relay Kit step
-    component: GaslessOnboarding,
+    component: GaslessOnboardingComponent,
     nextLabel: "Fina",
+    loginConfig: {
+      // add login config here
+    },
+    gaslessWalletConfig: {
+      // add gasless wallet config here
+    },
+    // loginConfig: LoginConfig,
+    // gaslessWalletConfig: GaslessWalletConfig
   }
 ];
