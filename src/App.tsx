@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { useCallback, useState } from "react";
 import CssBaseline from "@mui/material/CssBaseline";
 import Box from "@mui/material/Box";
@@ -136,9 +137,10 @@ const steps = [
       // add login config here
     },
     gaslessWalletConfig: {
+      
       // add gasless wallet config here
+      // loginConfig: LoginConfig,
+      // gaslessWalletConfig: GaslessWalletConfig
     },
-    // loginConfig: LoginConfig,
-    // gaslessWalletConfig: GaslessWalletConfig
   }
 ];

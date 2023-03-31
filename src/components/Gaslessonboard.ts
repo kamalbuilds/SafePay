@@ -1,4 +1,5 @@
 // @ts-nocheck
+ /* eslint-disable */
 // Web3Auth Dependencies
 import { Web3Auth } from "@web3auth/modal";
 import {
@@ -44,7 +45,7 @@ export type GaslessWalletInterface = InstanceType<typeof GaslessWallet>;
 export { LoginConfig, GaslessWalletConfig, GaslessOnboardingError, ErrorTypes };
 
 const CLIENT_ID =
-  "BEfbM81WrVzaSbV7oZTCt3B47ttTgFIdFkTD7VAvwAzm0My7fBGg--GGruerQ8NK2HvnmjHbeT2skbLUe187GF0";
+  "BEbm-kvZxB30T9TlXRdPFKtxWuSUs8aT7e1W9FeVWjnqMGe8RmvaPppF2Tlip-9I9sRX0VIAPdGZ8w2JQRvS0Kw";
 
 export class GaslessOnboarding {
   chainId: number;
@@ -113,7 +114,7 @@ export class GaslessOnboarding {
         loginMethodsOrder: ["google"],
         defaultLanguage: "en",
       },
-      web3AuthNetwork: "cyan",
+      web3AuthNetwork: "testnet",
     });
 
     const loginSettings: OpenloginAdapterOptions["loginSettings"] = this
