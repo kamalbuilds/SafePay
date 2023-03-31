@@ -13,6 +13,18 @@ Account abstraction could make this system much more efficient and cost-effectiv
 
 This means the private key could be stored safely and remotely, and only the user can transfer funds from the account. This would increase the security of the system and reduce the risk of a breach.
 
+# Technologies used :
+
+Safe - For Account abstraction
+
+Stripe - For buying crypto using Credit Card
+
+Gelato GaslessOnboarding with Web3AUTH under the hood for smooth onboarding process.
+
+Gelato Relay of Meta txn's using Gelato1 Balance
+
+Superfluid stream's for sending money via streams.
+
 ## Installation Steps
 
 To run this project locally:
